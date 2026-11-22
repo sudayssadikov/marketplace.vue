@@ -1,0 +1,186 @@
+/* iOS Liquid Glass Design System Variables */
+
+:root {
+  /* Typography - iOS System Font Stack */
+  --font-family-base: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* iOS Type Scale */
+  --font-size-large-title: 2.125rem; /* 34px */
+  --font-size-title-1: 1.75rem;      /* 28px */
+  --font-size-title-2: 1.375rem;     /* 22px */
+  --font-size-title-3: 1.25rem;      /* 20px */
+  --font-size-headline: 1.0625rem;   /* 17px */
+  --font-size-body: 0.9375rem;       /* 15px */
+  --font-size-subhead: 0.875rem;     /* 14px */
+  --font-size-footnote: 0.8125rem;   /* 13px */
+  --font-size-caption: 0.75rem;      /* 12px */
+  --font-size-caption-2: 0.6875rem;  /* 11px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-heavy: 800;
+
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-title: -0.035em;
+  --letter-spacing-body: -0.01em;
+
+  /* Spacing */
+  --spacing-2xs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 48px;
+
+  /* Border Radii */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-input: 14px;
+  --radius-md: 18px;
+  --radius-card: 22px;
+  --radius-lg: 26px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-pill: 9999px;
+  --radius-full: 9999px;
+
+  /* Convenience aliases */
+  --color-card: var(--color-bg-surface);
+  --color-surface: var(--color-bg-fill);
+  --color-text-primary: var(--color-label-primary);
+  --color-text-secondary: var(--color-label-secondary);
+  --color-text-tertiary: var(--color-label-tertiary);
+  --color-primary-light: var(--color-primary-tint);
+
+  /* Spring Motion & Transitions */
+  --spring-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --spring-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-fast: 140ms var(--spring-ease);
+  --transition-base: 240ms var(--spring-ease);
+  --transition-spring: 360ms var(--spring-bounce);
+
+  /* Layout dimensions */
+  --header-height: 64px;
+  --mobile-tab-height: 60px;
+  --z-header: 1000;
+  --z-offcanvas: 1100;
+  --z-backdrop: 1050;
+  --z-toast: 1200;
+
+  /* iOS Light Palette (Default) */
+  --color-primary: #0A84FF;
+  --color-primary-hover: #0070E0;
+  --color-primary-active: #005BBF;
+  --color-primary-tint: rgba(10, 132, 255, 0.12);
+  --color-primary-glow: rgba(10, 132, 255, 0.25);
+
+  --color-success: #34C759;
+  --color-success-tint: rgba(52, 199, 89, 0.14);
+  --color-warning: #FF9500;
+  --color-warning-tint: rgba(255, 149, 0, 0.14);
+  --color-danger: #FF3B30;
+  --color-danger-tint: rgba(255, 59, 48, 0.14);
+  --color-indigo: #5856D6;
+
+  /* iOS Backgrounds & Surfaces (Light) */
+  --color-bg-body: #F2F2F7;               /* System Grouped Background */
+  --color-bg-surface: #FFFFFF;            /* Pure white surface */
+  --color-bg-card: rgba(255, 255, 255, 0.88);
+  --color-bg-elevated: #FFFFFF;
+  --color-bg-fill: rgba(120, 120, 128, 0.08); /* Secondary Fill */
+  --color-bg-fill-hover: rgba(120, 120, 128, 0.14);
+  --color-bg-fill-active: rgba(120, 120, 128, 0.2);
+
+  /* Liquid Glass */
+  --glass-bg: rgba(255, 255, 255, 0.78);
+  --glass-blur: blur(24px) saturate(180%);
+  --glass-border: rgba(60, 60, 67, 0.12);
+  --glass-inner-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.8);
+
+  /* Labels / Typography (Light) */
+  --color-label-primary: #000000;
+  --color-label-secondary: rgba(60, 60, 67, 0.6);
+  --color-label-tertiary: rgba(60, 60, 67, 0.38);
+  --color-label-quaternary: rgba(60, 60, 67, 0.22);
+  --color-label-white: #FFFFFF;
+
+  /* Hairline Separators & Borders */
+  --color-separator: rgba(60, 60, 67, 0.12);
+  --color-separator-opaque: #C6C6C8;
+
+  /* Soft Layered Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-float-pill: 0 10px 30px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+
+  /* Badges */
+  --badge-discount-bg: rgba(255, 59, 48, 0.12);
+  --badge-discount-text: #FF3B30;
+  --badge-new-bg: rgba(52, 199, 89, 0.12);
+  --badge-new-text: #28a745;
+  --badge-popular-bg: rgba(255, 149, 0, 0.12);
+  --badge-popular-text: #FF9500;
+}
+
+/* iOS Dark Palette */
+[data-theme="dark"] {
+  --color-primary: #0A84FF;
+  --color-primary-hover: #409CFF;
+  --color-primary-active: #0A84FF;
+  --color-primary-tint: rgba(10, 132, 255, 0.2);
+  --color-primary-glow: rgba(10, 132, 255, 0.35);
+
+  --color-success: #30D158;
+  --color-success-tint: rgba(48, 209, 88, 0.2);
+  --color-warning: #FF9F0A;
+  --color-warning-tint: rgba(255, 159, 10, 0.2);
+  --color-danger: #FF453A;
+  --color-danger-tint: rgba(255, 69, 58, 0.2);
+
+  /* iOS Backgrounds & Surfaces (Dark) */
+  --color-bg-body: #000000;               /* Pure OLED black */
+  --color-bg-surface: #1C1C1E;            /* Secondary System Grouped */
+  --color-bg-card: rgba(28, 28, 30, 0.85);
+  --color-bg-elevated: #2C2C2E;           /* Tertiary System Grouped */
+  --color-bg-fill: rgba(120, 120, 128, 0.24);
+  --color-bg-fill-hover: rgba(120, 120, 128, 0.32);
+  --color-bg-fill-active: rgba(120, 120, 128, 0.4);
+
+  /* Liquid Glass (Dark) */
+  --glass-bg: rgba(28, 28, 30, 0.75);
+  --glass-blur: blur(28px) saturate(190%);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-inner-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+
+  /* Labels / Typography (Dark) */
+  --color-label-primary: #FFFFFF;
+  --color-label-secondary: rgba(235, 235, 245, 0.6);
+  --color-label-tertiary: rgba(235, 235, 245, 0.35);
+  --color-label-quaternary: rgba(235, 235, 245, 0.2);
+  --color-label-white: #FFFFFF;
+
+  /* Hairline Separators & Borders */
+  --color-separator: rgba(255, 255, 255, 0.12);
+  --color-separator-opaque: #38383A;
+
+  /* Shadows (Dark) */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.6);
+  --shadow-float-pill: 0 12px 36px rgba(0, 0, 0, 0.7), 0 2px 8px rgba(0, 0, 0, 0.4);
+
+  /* Badges */
+  --badge-discount-bg: rgba(255, 69, 58, 0.22);
+  --badge-discount-text: #FF6961;
+  --badge-new-bg: rgba(48, 209, 88, 0.22);
+  --badge-new-text: #30D158;
+  --badge-popular-bg: rgba(255, 159, 10, 0.22);
+  --badge-popular-text: #FF9F0A;
+}

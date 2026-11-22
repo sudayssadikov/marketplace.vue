@@ -1,0 +1,286 @@
+{
+  "app": {
+    "name": "Bozor",
+    "tagline": "Modern and trusted online marketplace"
+  },
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "deals": "Deals",
+    "popular": "Popular",
+    "new": "New Arrivals",
+    "favorites": "Favorites",
+    "cart": "Cart",
+    "profile": "Profile",
+    "login": "Login",
+    "register": "Register"
+  },
+  "header": {
+    "catalogButton": "Catalog",
+    "searchPlaceholder": "Search products, categories or brands...",
+    "searchAria": "Search products",
+    "themeToggleAria": "Toggle dark / light theme",
+    "languageSelectAria": "Select language",
+    "favoritesAria": "Favorites list",
+    "cartAria": "Shopping cart",
+    "profileAria": "User profile",
+    "menuToggleAria": "Open menu",
+    "closeMenuAria": "Close menu",
+    "cartEmpty": "Cart is empty",
+    "cartItemsCount": "{count} items"
+  },
+  "hero": {
+    "badge": "Season Special Offer",
+    "slide1": {
+      "title": "Next-Gen Gadgets & Technology",
+      "subtitle": "Apple, Samsung and Xiaomi with official warranty and flexible installment plans",
+      "cta": "Shop Now",
+      "tag": "Up to 15% OFF"
+    },
+    "slide2": {
+      "title": "Pro Laptops & Workstations",
+      "subtitle": "High-performance machines designed for developers, creators, and gamers",
+      "cta": "Learn More",
+      "tag": "Special Deals"
+    },
+    "slide3": {
+      "title": "Smart Home & Home Appliances",
+      "subtitle": "Modern innovations that bring comfort, cleanliness and peace of mind home",
+      "cta": "Explore",
+      "tag": "Free Delivery"
+    }
+  },
+  "categories": {
+    "title": "Popular Categories",
+    "subtitle": "Find what you're looking for by browsing categories",
+    "all": "All Categories",
+    "smartphones": "Smartphones",
+    "laptops": "Laptops",
+    "audio": "Audio & Headphones",
+    "wearables": "Smartwatches",
+    "appliances": "Appliances",
+    "gaming": "Gaming & Consoles",
+    "clothing": "Clothing & Shoes",
+    "itemsCount": "{count} products"
+  },
+  "sections": {
+    "popular": {
+      "title": "Popular Products",
+      "subtitle": "Top picks loved and chosen by our shoppers",
+      "viewAll": "View All"
+    },
+    "deals": {
+      "title": "Hot Deals",
+      "subtitle": "Catch the best prices and biggest savings this week",
+      "viewAll": "All Deals"
+    },
+    "new": {
+      "title": "New Arrivals",
+      "subtitle": "The freshest additions to our store collection",
+      "viewAll": "New Items"
+    },
+    "allProducts": {
+      "title": "All Products",
+      "subtitle": "Curated selection of quality goods tailored for you",
+      "found": "{count} products found"
+    }
+  },
+  "sort": {
+    "label": "Sort by:",
+    "featured": "Featured",
+    "priceAsc": "Price: Low to High",
+    "priceDesc": "Price: High to Low",
+    "rating": "Highest Rated",
+    "newest": "Newest First",
+    "discount": "Biggest Discount"
+  },
+  "product": {
+    "currency": "UZS",
+    "rating": "Rating",
+    "reviews": "review",
+    "reviewsPlural": "{count} reviews",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "stockCount": "{count} left",
+    "seller": "Seller",
+    "location": "Delivery Location",
+    "specs": "Key Specifications",
+    "addToCart": "Add to Cart",
+    "inCart": "In Cart",
+    "quickView": "Quick View",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "badgeNew": "New",
+    "badgeDiscount": "Sale",
+    "badgePopular": "Hot"
+  },
+  "filters": {
+    "title": "Filters",
+    "priceRange": "Price Range (UZS)",
+    "minPrice": "Min",
+    "maxPrice": "Max",
+    "rating": "Minimum Rating",
+    "inStockOnly": "In Stock Only",
+    "apply": "Apply",
+    "resetAll": "Reset All",
+    "showResults": "Show Results",
+    "allCategories": "All Categories",
+    "activeFilters": "Active Filters"
+  },
+  "productDetail": {
+    "buyNow": "Buy Now",
+    "quantity": "Quantity",
+    "description": "Description",
+    "specs": "Specifications",
+    "reviews": "Reviews",
+    "writeReview": "Write a Review",
+    "noReviews": "No reviews yet. Be the first to share your thoughts!",
+    "sellerCard": "About Seller",
+    "sellerRating": "Rating",
+    "sellerSales": "Successful Orders",
+    "relatedProducts": "Related Products",
+    "warranty": "1 Year Official Warranty",
+    "deliveryNotice": "Free express delivery within 1 day",
+    "share": "Share",
+    "copied": "Link copied to clipboard!",
+    "zoom": "Zoom",
+    "sku": "SKU"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "itemsCount": "{count} items",
+    "emptyCart": "Your Cart is Empty",
+    "emptyCartDesc": "Looks like you haven't added anything to your cart yet. Explore our catalog to find items you'll love.",
+    "continueShopping": "Continue Shopping",
+    "clearCart": "Clear Cart",
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal",
+    "discount": "Savings",
+    "delivery": "Delivery",
+    "deliveryFree": "Free",
+    "total": "Total Amount",
+    "promoCode": "Promo Code",
+    "promoPlaceholder": "Enter promo code",
+    "applyPromo": "Apply",
+    "checkout": "Proceed to Checkout",
+    "orderSuccess": "Your order has been placed successfully! Our representative will contact you shortly.",
+    "orderPlacedSuccess": "Your order has been placed successfully!",
+    "itemRemoved": "Item removed from cart",
+    "cartCleared": "Cart cleared",
+    "clearedSuccess": "Cart cleared"
+  },
+  "favorites": {
+    "title": "Favorites List",
+    "itemsCount": "{count} items",
+    "emptyFavorites": "No Favorites Yet",
+    "emptyFavoritesDesc": "Tap the heart icon on any product to save items you want to keep an eye on.",
+    "browseProducts": "Browse Catalog",
+    "addAllToCart": "Add All to Cart",
+    "allAddedToCart": "All favorites added to cart!"
+  },
+  "auth": {
+    "loginTitle": "Welcome Back",
+    "loginSubtitle": "Sign in to access your orders and saved items",
+    "registerTitle": "Create Account",
+    "registerSubtitle": "Join Bozor and enjoy exclusive benefits and personalized discounts",
+    "email": "Email Address",
+    "emailPlaceholder": "example@mail.com",
+    "password": "Password",
+    "passwordPlaceholder": "At least 6 characters",
+    "name": "Full Name",
+    "namePlaceholder": "John Doe",
+    "confirmPassword": "Confirm Password",
+    "loginBtn": "Sign In",
+    "registerBtn": "Create Account",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "loginLink": "Sign In",
+    "registerLink": "Sign Up",
+    "demoNotice": "Demo mode: you can sign in with any email and 6+ character password",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email address",
+    "passwordRequired": "Password is required",
+    "passwordMin": "Password must be at least 6 characters",
+    "nameRequired": "Full name is required",
+    "passwordsMismatch": "Passwords do not match",
+    "loginSuccess": "Welcome back, {name}!",
+    "registerSuccess": "Account created successfully!",
+    "logoutSuccess": "You have been signed out"
+  },
+  "profile": {
+    "title": "My Profile",
+    "guestTitle": "Guest User",
+    "guestSubtitle": "Sign in to track orders, manage addresses, and access saved items",
+    "signInBtn": "Sign In",
+    "signUpBtn": "Sign Up",
+    "accountSettings": "Account Settings",
+    "appPreferences": "App Preferences",
+    "orders": "My Orders",
+    "ordersDesc": "Track active and past order history",
+    "ordersCount": "{count} orders",
+    "savedAddresses": "Delivery Addresses",
+    "language": "Language",
+    "theme": "Theme Appearance",
+    "support": "Customer Support",
+    "logout": "Log Out",
+    "logoutConfirm": "Are you sure you want to log out?",
+    "updatedSuccess": "Profile updated successfully",
+    "memberSince": "Member since"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "cart": "Cart",
+    "favorites": "Favorites",
+    "profile": "Profile",
+    "login": "Login",
+    "register": "Register"
+  },
+  "pagination": {
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "showing": "Showing {from}-{to} of {total}",
+    "goToPage": "Go to page {page}"
+  },
+  "empty": {
+    "noProducts": "No products found",
+    "tryDifferent": "Try adjusting your search criteria or resetting filters",
+    "resetFilters": "Reset Filters"
+  },
+  "footer": {
+    "aboutTitle": "About Us",
+    "aboutText": "Bozor is Uzbekistan's premier modern marketplace offering wide selection, guaranteed quality, and prompt delivery.",
+    "linksTitle": "Quick Links",
+    "categoriesTitle": "Categories",
+    "customerCare": "Customer Care",
+    "faq": "Frequently Asked Questions",
+    "delivery": "Delivery Information",
+    "returns": "Returns & Refunds",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contactTitle": "Contact Us",
+    "supportPhone": "+998 71 200-00-00",
+    "supportEmail": "support@bozor.uz",
+    "workHours": "Mon - Sun: 09:00 - 21:00",
+    "paymentMethods": "Payment Methods",
+    "social": "Social Media",
+    "copyright": "© 2026 Bozor Marketplace. All rights reserved."
+  },
+  "placeholders": {
+    "stage2Title": "Available in Stage 2",
+    "stage2Desc": "This page will be fully implemented during Stage 2.",
+    "backHome": "Back to Home",
+    "catalog": "Catalog Page",
+    "cart": "Shopping Cart",
+    "favorites": "Favorites List",
+    "product": "Product Details",
+    "login": "Sign In",
+    "register": "Registration"
+  },
+  "notFound": {
+    "title": "404 - Page Not Found",
+    "description": "Sorry, the page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to Home"
+  }
+}

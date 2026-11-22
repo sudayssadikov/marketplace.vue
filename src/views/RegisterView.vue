@@ -1,0 +1,368 @@
+<template>
+  <div class="auth-view">
+    <div class="container-fluid content-container">
+      <div class="auth-card-wrapper">
+        <div class="auth-card">
+          <!-- Card Header -->
+          <div class="auth-header">
+            <div class="auth-icon-badge">
+              <AppIcon name="user" size="24" />
+            </div>
+            <h1 class="auth-title">{{ $t('auth.registerTitle') }}</h1>
+            <p class="auth-subtitle">{{ $t('auth.registerSubtitle') }}</p>
+          </div>
+
+          <!-- Register Form -->
+          <form class="auth-form" @submit.prevent="handleSubmit">
+            <!-- Name Field -->
+            <div class="form-group">
+              <label for="reg-name" class="form-label">{{ $t('auth.name') }}</label>
+              <div class="input-wrap" :class="{ 'has-error': errors.name }">
+                <AppIcon name="user" size="18" class="input-icon" />
+                <input
+                  id="reg-name"
+                  v-model.trim="name"
+                  type="text"
+                  :placeholder="$t('auth.namePlaceholder')"
+                  class="ios-input"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <span v-if="errors.name" class="error-msg">{{ errors.name }}</span>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+              <label for="reg-email" class="form-label">{{ $t('auth.email') }}</label>
+              <div class="input-wrap" :class="{ 'has-error': errors.email }">
+                <AppIcon name="mail" size="18" class="input-icon" />
+                <input
+                  id="reg-email"
+                  v-model.trim="email"
+                  type="email"
+                  :placeholder="$t('auth.emailPlaceholder')"
+                  class="ios-input"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <span v-if="errors.email" class="error-msg">{{ errors.email }}</span>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+              <label for="reg-password" class="form-label">{{ $t('auth.password') }}</label>
+              <div class="input-wrap" :class="{ 'has-error': errors.password }">
+                <AppIcon name="lock" size="18" class="input-icon" />
+                <input
+                  id="reg-password"
+                  v-model="password"
+                  :type="showPassword ? 'text' : 'password'"
+                  :placeholder="$t('auth.passwordPlaceholder')"
+                  class="ios-input"
+                  autocomplete="new-password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="password-toggle-btn"
+                  :aria-label="showPassword ? 'Hide password' : 'Show password'"
+                  @click="showPassword = !showPassword"
+                >
+                  <AppIcon :name="showPassword ? 'eye-slash' : 'eye'" size="18" />
+                </button>
+              </div>
+              <span v-if="errors.password" class="error-msg">{{ errors.password }}</span>
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="form-group">
+              <label for="reg-confirm" class="form-label">{{ $t('auth.confirmPassword') }}</label>
+              <div class="input-wrap" :class="{ 'has-error': errors.confirmPassword }">
+                <AppIcon name="check" size="18" class="input-icon" />
+                <input
+                  id="reg-confirm"
+                  v-model="confirmPassword"
+                  :type="showPassword ? 'text' : 'password'"
+                  :placeholder="$t('auth.passwordPlaceholder')"
+                  class="ios-input"
+                  autocomplete="new-password"
+                  required
+                />
+              </div>
+              <span v-if="errors.confirmPassword" class="error-msg">{{ errors.confirmPassword }}</span>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="btn btn-primary btn-submit"
+              :disabled="isLoading"
+            >
+              <span v-if="isLoading" class="spinner-border spinner-border-sm me-2"></span>
+              <span>{{ $t('auth.registerBtn') }}</span>
+            </button>
+          </form>
+
+          <!-- Card Footer Switch Link -->
+          <div class="auth-footer">
+            <span class="footer-text">{{ $t('auth.haveAccount') }}</span>
+            <router-link to="/login" class="auth-switch-link">
+              {{ $t('auth.loginLink') }}
+            </router-link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'RegisterView',
+  data() {
+    return {
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      showPassword: false,
+      isLoading: false,
+      errors: {
+        name: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+      }
+    };
+  },
+  methods: {
+    validate() {
+      let isValid = true;
+      this.errors = { name: '', email: '', password: '', confirmPassword: '' };
+
+      if (!this.name.trim()) {
+        this.errors.name = this.$t('auth.nameRequired');
+        isValid = false;
+      }
+
+      if (!this.email) {
+        this.errors.email = this.$t('auth.emailRequired');
+        isValid = false;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email)) {
+        this.errors.email = this.$t('auth.emailInvalid');
+        isValid = false;
+      }
+
+      if (!this.password) {
+        this.errors.password = this.$t('auth.passwordRequired');
+        isValid = false;
+      } else if (this.password.length < 6) {
+        this.errors.password = this.$t('auth.passwordMin');
+        isValid = false;
+      }
+
+      if (this.password !== this.confirmPassword) {
+        this.errors.confirmPassword = this.$t('auth.passwordsMismatch');
+        isValid = false;
+      }
+
+      return isValid;
+    },
+    async handleSubmit() {
+      if (!this.validate()) return;
+      this.isLoading = true;
+      try {
+        await this.$store.dispatch('auth/register', {
+          name: this.name,
+          email: this.email,
+          password: this.password
+        });
+        this.$router.push('/profile');
+      } catch (err) {
+        this.errors.password = err.message || 'Registration failed';
+      } finally {
+        this.isLoading = false;
+      }
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.auth-view {
+  padding: 3rem 0 6rem;
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+}
+
+.content-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.auth-card-wrapper {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.auth-card {
+  padding: 2.25rem 2rem;
+  border-radius: var(--radius-2xl);
+  background: var(--color-card);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-md);
+
+  @include respond-to('sm') {
+    padding: 2.5rem 2.25rem;
+  }
+
+  .auth-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    .auth-icon-badge {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: var(--radius-full);
+      background: rgba(10, 132, 255, 0.1);
+      color: var(--color-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .auth-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--color-text-primary);
+      margin-bottom: 0.375rem;
+    }
+
+    .auth-subtitle {
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+      margin: 0;
+      line-height: 1.4;
+    }
+  }
+
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.375rem;
+
+      .form-label {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--color-text-primary);
+      }
+
+      .input-wrap {
+        display: flex;
+        align-items: center;
+        background: var(--color-surface);
+        border: 1px solid var(--glass-border);
+        border-radius: 14px;
+        padding: 0 0.875rem;
+        transition: border-color var(--transition-base), box-shadow var(--transition-base);
+
+        &:focus-within {
+          border-color: var(--color-primary);
+          box-shadow: 0 0 0 3px var(--color-primary-light);
+        }
+
+        &.has-error {
+          border-color: var(--color-danger);
+        }
+
+        .input-icon {
+          color: var(--color-text-tertiary);
+          margin-right: 0.625rem;
+          flex-shrink: 0;
+        }
+
+        .ios-input {
+          flex: 1;
+          height: 48px;
+          border: none;
+          background: transparent;
+          color: var(--color-text-primary);
+          font-size: 0.9375rem;
+          outline: none;
+
+          &::placeholder {
+            color: var(--color-text-tertiary);
+          }
+        }
+
+        .password-toggle-btn {
+          border: none;
+          background: transparent;
+          color: var(--color-text-tertiary);
+          cursor: pointer;
+          padding: 0.25rem;
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            color: var(--color-text-primary);
+          }
+        }
+      }
+
+      .error-msg {
+        font-size: 0.75rem;
+        color: var(--color-danger);
+        font-weight: 500;
+      }
+    }
+
+    .btn-submit {
+      margin-top: 0.5rem;
+      min-height: 50px;
+      border-radius: var(--radius-full);
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(10, 132, 255, 0.3);
+    }
+  }
+
+  .auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--glass-border);
+    font-size: 0.875rem;
+
+    .footer-text {
+      color: var(--color-text-secondary);
+      margin-right: 0.375rem;
+    }
+
+    .auth-switch-link {
+      color: var(--color-primary);
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+</style>
+

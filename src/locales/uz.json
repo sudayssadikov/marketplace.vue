@@ -1,0 +1,286 @@
+{
+  "app": {
+    "name": "Bozor",
+    "tagline": "Zamonaviy va ishonchli onlayn bozor"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "catalog": "Katalog",
+    "deals": "Chegirmalar",
+    "popular": "Ommabop",
+    "new": "Yangi mahsulotlar",
+    "favorites": "Sevimlilar",
+    "cart": "Savat",
+    "profile": "Profil",
+    "login": "Kirish",
+    "register": "Ro'yxatdan o'tish"
+  },
+  "header": {
+    "catalogButton": "Katalog",
+    "searchPlaceholder": "Mahsulotlar, toifalar yoki brendlarni qidiring...",
+    "searchAria": "Mahsulot qidirish",
+    "themeToggleAria": "Mavzuni o'zgartirish",
+    "languageSelectAria": "Tilni tanlash",
+    "favoritesAria": "Sevimlilar ro'yxati",
+    "cartAria": "Xaridlar savati",
+    "profileAria": "Foydalanuvchi profili",
+    "menuToggleAria": "Menyuni ochish",
+    "closeMenuAria": "Menyuni yopish",
+    "cartEmpty": "Savat bo'sh",
+    "cartItemsCount": "{count} ta mahsulot"
+  },
+  "hero": {
+    "badge": "Yangi mavsum taklifi",
+    "slide1": {
+      "title": "Eng so'nggi gadjetlar va texnologiyalar",
+      "subtitle": "Apple, Samsung va Xiaomi rasmiy kafolat bilan, qulay to'lov shartlarida",
+      "cta": "Xarid qilish",
+      "tag": "15% gacha chegirma"
+    },
+    "slide2": {
+      "title": "Professional noutbuklar va ish stantsiyalari",
+      "subtitle": "Dasturchilar, dizaynerlar va geymerlar uchun yuqori quvvat",
+      "cta": "Batafsil ko'rish",
+      "tag": "Maxsus narxlar"
+    },
+    "slide3": {
+      "title": "Aqlli uy va qulay maishiy texnika",
+      "subtitle": "Uyingizda tozalik va farovonlikni ta'minlaydigan zamonaviy yechimlar",
+      "cta": "Tanlash",
+      "tag": "Bepul yetkazib berish"
+    }
+  },
+  "categories": {
+    "title": "Mashhur toifalar",
+    "subtitle": "Kerakli mahsulotni toifalar orqali oson toping",
+    "all": "Barcha toifalar",
+    "smartphones": "Smartfonlar",
+    "laptops": "Noutbuklar",
+    "audio": "Audio & Naushniklar",
+    "wearables": "Aqlli soatlar",
+    "appliances": "Maishiy texnika",
+    "gaming": "Geyming & Konsollar",
+    "clothing": "Kiyim va poyabzal",
+    "itemsCount": "{count} ta mahsulot"
+  },
+  "sections": {
+    "popular": {
+      "title": "Ommabop mahsulotlar",
+      "subtitle": "Xaridorlar tomonidan eng ko'p tanlangan mahsulotlar",
+      "viewAll": "Barchasini ko'rish"
+    },
+    "deals": {
+      "title": "Katta chegirmalar",
+      "subtitle": "Haftaning eng qaynoq va foydali takliflari",
+      "viewAll": "Barcha chegirmalar"
+    },
+    "new": {
+      "title": "Yangi kelganlar",
+      "subtitle": "Do'konimiz assortimentiga qo'shilgan so'nggi yangiliklar",
+      "viewAll": "Yangi tovarlar"
+    },
+    "allProducts": {
+      "title": "Barcha mahsulotlar",
+      "subtitle": "Siz uchun saralangan sifatli tovarlar katalogi",
+      "found": "{count} ta mahsulot topildi"
+    }
+  },
+  "sort": {
+    "label": "Saralash:",
+    "featured": "Tavsiya etilgan",
+    "priceAsc": "Narx: arzondan qimmatga",
+    "priceDesc": "Narx: qimmatdan arzonga",
+    "rating": "Reyting bo'yicha",
+    "newest": "Eng yangilari",
+    "discount": "Chegirma miqdori bo'yicha"
+  },
+  "product": {
+    "currency": "so'm",
+    "rating": "Baholash",
+    "reviews": "sharh",
+    "reviewsPlural": "{count} sharh",
+    "inStock": "Sotuvda mavjud",
+    "outOfStock": "Tugagan",
+    "stockCount": "{count} ta qoldi",
+    "seller": "Sotuvchi",
+    "location": "Yetkazish manzili",
+    "specs": "Asosiy xususiyatlari",
+    "addToCart": "Savatga qo'shish",
+    "inCart": "Savatda",
+    "quickView": "Tez ko'rish",
+    "addToFavorites": "Sevimlilarga qo'shish",
+    "removeFromFavorites": "Sevimlilardan o'chirish",
+    "badgeNew": "Yangi",
+    "badgeDiscount": "Aksiya",
+    "badgePopular": "Xit"
+  },
+  "filters": {
+    "title": "Filtrlar",
+    "priceRange": "Narx oralig'i (so'm)",
+    "minPrice": "Dan",
+    "maxPrice": "Gacha",
+    "rating": "Minimal reyting",
+    "inStockOnly": "Faqat mavjudlari",
+    "apply": "Qo'llash",
+    "resetAll": "Tozalash",
+    "showResults": "Natijalarni ko'rish",
+    "allCategories": "Barcha toifalar",
+    "activeFilters": "Faol filtrlar"
+  },
+  "productDetail": {
+    "buyNow": "Hozir xarid qilish",
+    "quantity": "Miqdori",
+    "description": "Tavsif",
+    "specs": "Xususiyatlar",
+    "reviews": "Sharhlar",
+    "writeReview": "Sharh yozish",
+    "noReviews": "Hozircha sharhlar yo'q. Birinchi bo'lib fikr bildiring!",
+    "sellerCard": "Sotuvchi haqida",
+    "sellerRating": "Reyting",
+    "sellerSales": "Muvaffaqiyatli buyurtmalar",
+    "relatedProducts": "O'xshash mahsulotlar",
+    "warranty": "1 yillik rasmiy kafolat",
+    "deliveryNotice": "1 kun ichida tezkor va bepul yetkazib berish",
+    "share": "Ulashish",
+    "copied": "Havola nusxalandi!",
+    "zoom": "Kattalashtirish",
+    "sku": "Artikul"
+  },
+  "cart": {
+    "title": "Xaridlar savati",
+    "itemsCount": "{count} ta mahsulot",
+    "emptyCart": "Savatingiz bo'sh",
+    "emptyCartDesc": "Siz hali hech qanday mahsulot tanlamadingiz. Bizning boy assortimentimizdan o'zingizga ma'qul tovarlarni tanlang.",
+    "continueShopping": "Xaridni davom ettirish",
+    "clearCart": "Savatni tozalash",
+    "orderSummary": "Buyurtma hisobi",
+    "subtotal": "Mahsulotlar narxi",
+    "discount": "Tejov (chegirma)",
+    "delivery": "Yetkazib berish",
+    "deliveryFree": "Bepul",
+    "total": "Jami to'lov",
+    "promoCode": "Promokod",
+    "promoPlaceholder": "Promokodni kiriting",
+    "applyPromo": "Qo'llash",
+    "checkout": "Buyurtmani rasmiylashtirish",
+    "orderSuccess": "Buyurtmangiz qabul qilindi! Tez orada operator siz bilan bog'lanadi.",
+    "orderPlacedSuccess": "Buyurtmangiz muvaffaqiyatli qabul qilindi!",
+    "itemRemoved": "Mahsulot savatdan olib tashlandi",
+    "cartCleared": "Savat tozalandi",
+    "clearedSuccess": "Savat tozalandi"
+  },
+  "favorites": {
+    "title": "Sevimlilar ro'yxati",
+    "itemsCount": "{count} ta mahsulot",
+    "emptyFavorites": "Sevimlilar ro'yxati bo'sh",
+    "emptyFavoritesDesc": "O'zingizga yoqqan mahsulotlarni yurakcha belgisini bosib saqlab qo'ying va xaridingizni keyinroq amalga oshiring.",
+    "browseProducts": "Katalogni ko'rish",
+    "addAllToCart": "Barchasini savatga qo'shish",
+    "allAddedToCart": "Barcha sevimlilar savatga qo'shildi!"
+  },
+  "auth": {
+    "loginTitle": "Xush kelibsiz",
+    "loginSubtitle": "Akkauntingizga kiring va qulay xaridlardan bahramand bo'ling",
+    "registerTitle": "Ro'yxatdan o'tish",
+    "registerSubtitle": "Yangi hisob yarating va maxsus aksiyalarga ega bo'ling",
+    "email": "Elektron pochta",
+    "emailPlaceholder": "example@mail.uz",
+    "password": "Parol",
+    "passwordPlaceholder": "Kamida 6 ta belgi",
+    "name": "To'liq ismingiz",
+    "namePlaceholder": "Ali Valiyev",
+    "confirmPassword": "Parolni tasdiqlang",
+    "loginBtn": "Kirish",
+    "registerBtn": "Ro'yxatdan o'tish",
+    "noAccount": "Hisobingiz yo'qmi?",
+    "haveAccount": "Akkauntingiz bormi?",
+    "loginLink": "Kirish",
+    "registerLink": "Ro'yxatdan o'tish",
+    "demoNotice": "Demo tizim: istalgan email va kamida 6 belgili parol orqali kirishingiz mumkin",
+    "emailRequired": "Elektron pochta kiritilishi shart",
+    "emailInvalid": "Elektron pochta formati noto'g'ri",
+    "passwordRequired": "Parol kiritilishi shart",
+    "passwordMin": "Parol kamida 6 belgidan iborat bo'lishi kerak",
+    "nameRequired": "Ismingizni kiriting",
+    "passwordsMismatch": "Parollar bir xil emas",
+    "loginSuccess": "Xush kelibsiz, {name}!",
+    "registerSuccess": "Hisobingiz muvaffaqiyatli yaratildi!",
+    "logoutSuccess": "Tizimdan chiqdingiz"
+  },
+  "profile": {
+    "title": "Mening profilim",
+    "guestTitle": "Mehmon foydalanuvchi",
+    "guestSubtitle": "Buyurtmalarni kuzatish va qulay xaridlar uchun hisobingizga kiring",
+    "signInBtn": "Kirish",
+    "signUpBtn": "Ro'yxatdan o'tish",
+    "accountSettings": "Hisob sozlamalari",
+    "appPreferences": "Ilova parametrlari",
+    "orders": "Buyurtmalarim",
+    "ordersDesc": "Faol va yakunlangan buyurtmalar tarixi",
+    "ordersCount": "{count} ta buyurtma",
+    "savedAddresses": "Yetkazish manzillari",
+    "language": "Til / Language",
+    "theme": "Mavzu rejimi",
+    "support": "Mijozlarni qo'llab-quvvatlash",
+    "logout": "Hisobdan chiqish",
+    "logoutConfirm": "Haqiqatan ham hisobdan chiqmoqchimisiz?",
+    "updatedSuccess": "Profil muvaffaqiyatli yangilandi",
+    "memberSince": "A'zo bo'lgan sana"
+  },
+  "breadcrumbs": {
+    "home": "Bosh sahifa",
+    "catalog": "Katalog",
+    "cart": "Savat",
+    "favorites": "Sevimlilar",
+    "profile": "Profil",
+    "login": "Kirish",
+    "register": "Ro'yxatdan o'tish"
+  },
+  "pagination": {
+    "prev": "Oldingi",
+    "next": "Keyingi",
+    "page": "Sahifa",
+    "showing": "{from}-{to} dan {total} ta ko'rsatilmoqda",
+    "goToPage": "{page}-sahifaga o'tish"
+  },
+  "empty": {
+    "noProducts": "Mahsulotlar topilmadi",
+    "tryDifferent": "Qidiruv parametrlarini o'zgartirib ko'ring yoki filtrlarni tozalang",
+    "resetFilters": "Filtrlarni tozalash"
+  },
+  "footer": {
+    "aboutTitle": "Biz haqimizda",
+    "aboutText": "Bozor — O'zbekistondagi keng assortimentga ega, ishonchli va zamonaviy elektron tijorat platformasi. Kafolatlangan sifat va tezkor yetkazib berish.",
+    "linksTitle": "Tezkor havolalar",
+    "categoriesTitle": "Toifalar",
+    "customerCare": "Xaridorlarga yordam",
+    "faq": "Ko'p so'raladigan savollar",
+    "delivery": "Yetkazib berish xizmati",
+    "returns": "Tovarlarni qaytarish",
+    "privacy": "Maxfiylik siyosati",
+    "terms": "Foydalanish shartlari",
+    "contactTitle": "Bog'lanish",
+    "supportPhone": "+998 71 200-00-00",
+    "supportEmail": "support@bozor.uz",
+    "workHours": "Dush - Yak: 09:00 - 21:00",
+    "paymentMethods": "To'lov turlari",
+    "social": "Ijtimoiy tarmoqlar",
+    "copyright": "© 2026 Bozor Marketplace. Barcha huquqlar himoyalangan."
+  },
+  "placeholders": {
+    "stage2Title": "2-bosqichda ishga tushiriladi",
+    "stage2Desc": "Ushbu sahifa tizimning 2-bosqichida to'liq funksional holatda taqdim etiladi.",
+    "backHome": "Bosh sahifaga qaytish",
+    "catalog": "Katalog sahifasi",
+    "cart": "Xaridlar savati",
+    "favorites": "Sevimlilar ro'yxati",
+    "product": "Mahsulot tafsilotlari",
+    "login": "Tizimga kirish",
+    "register": "Ro'yxatdan o'tish"
+  },
+  "notFound": {
+    "title": "404 - Sahifa topilmadi",
+    "description": "Kechirasiz, siz qidirayotgan sahifa mavjud emas yoki boshqa manzilga ko'chirilgan bo'lishi mumkin.",
+    "backHome": "Bosh sahifaga qaytish"
+  }
+}

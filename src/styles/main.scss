@@ -1,0 +1,233 @@
+/* Bootstrap Grid only */
+@import 'bootstrap/dist/css/bootstrap-grid.min.css';
+
+/* Custom Design System */
+@import './variables';
+@import './mixins';
+@import './reset';
+
+/* Utility & Base Helper Classes */
+.marketplace-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.marketplace-main {
+  flex: 1 0 auto;
+  /* Add safe-padding for floating mobile bottom pill navigation */
+  padding-bottom: calc(var(--mobile-tab-height) + 2.5rem + env(safe-area-inset-bottom, 0px));
+
+  @media (min-width: 992px) {
+    padding-bottom: 3.5rem;
+  }
+}
+
+/* Sections */
+.section-container {
+  padding: 1.5rem 0;
+
+  @media (min-width: 768px) {
+    padding: 2.25rem 0;
+  }
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+
+  .section-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    .section-icon-bubble {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+    }
+  }
+
+  .section-title {
+    font-size: var(--font-size-title-3);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-label-primary);
+    letter-spacing: var(--letter-spacing-title);
+    line-height: 1.2;
+
+    @media (min-width: 768px) {
+      font-size: var(--font-size-title-2);
+    }
+  }
+
+  .section-subtitle {
+    font-size: var(--font-size-footnote);
+    color: var(--color-label-secondary);
+    margin-top: 0.15rem;
+  }
+
+  .section-link {
+    font-size: var(--font-size-subhead);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-primary-tint);
+    @include tap-spring;
+
+    &:hover {
+      background: var(--color-primary-tint);
+      opacity: 0.85;
+    }
+  }
+}
+
+/* Buttons - iOS Style (Pill shape, 48px mobile height) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-body);
+  min-height: 48px;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  border: 0.5px solid transparent;
+  white-space: nowrap;
+  user-select: none;
+  @include tap-spring;
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-label-white);
+  box-shadow: 0 4px 14px var(--color-primary-glow);
+
+  &:hover {
+    background-color: var(--color-primary-hover);
+    color: var(--color-label-white);
+  }
+}
+
+.btn-secondary {
+  background-color: var(--color-bg-fill);
+  color: var(--color-label-primary);
+
+  &:hover {
+    background-color: var(--color-bg-fill-hover);
+  }
+}
+
+.btn-glass {
+  @include liquid-glass;
+  color: var(--color-label-primary);
+  box-shadow: var(--shadow-sm);
+
+  &:hover {
+    background: var(--color-bg-surface);
+  }
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-fill);
+  color: var(--color-label-primary);
+  @include tap-spring;
+
+  &:hover {
+    background-color: var(--color-bg-fill-hover);
+  }
+}
+
+/* Badges - iOS Soft Tinted Pills */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.65rem;
+  font-size: var(--font-size-caption-2);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-pill);
+  line-height: 1.2;
+}
+
+.badge-new {
+  background-color: var(--badge-new-bg);
+  color: var(--badge-new-text);
+}
+
+.badge-discount {
+  background-color: var(--badge-discount-bg);
+  color: var(--badge-discount-text);
+}
+
+.badge-popular {
+  background-color: var(--badge-popular-bg);
+  color: var(--badge-popular-text);
+}
+
+/* Skeleton Loading Shimmer */
+.skeleton-box {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-bg-fill);
+  border-radius: var(--radius-sm);
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0,
+      rgba(255, 255, 255, 0.3) 25%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 1.8s infinite;
+    content: '';
+  }
+}
+
+[data-theme="dark"] .skeleton-box::after {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

@@ -101,8 +101,15 @@
           <div class="settings-group">
             <h2 class="group-title">{{ $t('profile.appPreferences') }}</h2>
             <div class="ios-list-card">
-              <!-- Language Switcher Row -->
-              <div class="ios-list-item interactive-control">
+              <!-- Language Row (Native iOS row pattern) -->
+              <div
+                class="ios-list-item clickable-row"
+                role="button"
+                tabindex="0"
+                :aria-label="$t('profile.language')"
+                @click="openLanguageSheet($event)"
+                @keydown.enter="openLanguageSheet($event)"
+              >
                 <div class="item-icon-wrap bg-orange">
                   <AppIcon name="globe" size="18" />
                 </div>
@@ -110,7 +117,8 @@
                   <span class="item-title">{{ $t('profile.language') }}</span>
                 </div>
                 <div class="item-right">
-                  <LanguageSwitcher />
+                  <span class="badge-lang-code">{{ currentLanguageCode }}</span>
+                  <AppIcon name="chevron-right" size="14" class="chevron" />
                 </div>
               </div>
 
@@ -176,6 +184,9 @@
             </div>
           </div>
         </div>
+
+        <!-- Teleported Language Sheet & Popover -->
+        <LanguageSheet ref="langSheetRef" :show-trigger="false" />
       </div>
     </div>
   </div>
@@ -183,14 +194,14 @@
 
 <script>
 import Breadcrumbs from '@/components/common/Breadcrumbs.vue';
-import LanguageSwitcher from '@/components/common/LanguageSwitcher.vue';
+import LanguageSheet from '@/components/common/LanguageSheet.vue';
 import ThemeToggle from '@/components/common/ThemeToggle.vue';
 
 export default {
   name: 'ProfileView',
   components: {
     Breadcrumbs,
-    LanguageSwitcher,
+    LanguageSheet,
     ThemeToggle
   },
   computed: {
@@ -212,6 +223,10 @@ export default {
     isDark() {
       return this.$store.getters['ui/isDark'];
     },
+    currentLanguageCode() {
+      const map = { uz: 'UZ', ru: 'RU', en: 'EN' };
+      return map[this.$i18n.locale] || 'UZ';
+    },
     breadcrumbItems() {
       return [
         { label: this.$t('breadcrumbs.profile') }
@@ -219,6 +234,11 @@ export default {
     }
   },
   methods: {
+    openLanguageSheet(event) {
+      if (this.$refs.langSheetRef) {
+        this.$refs.langSheetRef.open(event);
+      }
+    },
     handleOrdersClick() {
       this.$store.dispatch('ui/showToast', {
         message: 'profile.ordersDesc',
@@ -433,6 +453,16 @@ export default {
         font-size: 0.8125rem;
         font-weight: 600;
         color: var(--color-text-secondary);
+      }
+
+      .badge-lang-code {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        background: rgba(10, 132, 255, 0.12);
+        padding: 2px 7px;
+        border-radius: 6px;
+        letter-spacing: 0.04em;
       }
 
       .chevron {

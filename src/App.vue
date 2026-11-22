@@ -58,6 +58,23 @@ export default {
 <style lang="scss">
 @import '@/styles/main';
 
+.marketplace-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--color-bg-body);
+
+  /* Page bottom padding = tab bar height (64px) + safe area + 16px */
+  @media (max-width: 991.98px) {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px) + 26px);
+  }
+}
+
+.marketplace-main {
+  flex: 1 0 auto;
+}
+
 /* iOS Glass Toast Notification */
 .ios-glass-toast {
   position: fixed;

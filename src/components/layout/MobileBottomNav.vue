@@ -87,23 +87,30 @@ export default {
 .mobile-bottom-nav {
   position: fixed;
   bottom: calc(10px + env(safe-area-inset-bottom, 0px));
-  left: 14px;
-  right: 14px;
+  left: 12px;
+  right: 12px;
+  width: auto;
+  max-width: calc(100vw - 24px);
+  margin: 0 auto;
   z-index: var(--z-header);
-  pointer-events: none; /* Let background clicks pass through empty sides */
+  pointer-events: none;
+  box-sizing: border-box;
 }
 
 .nav-pill-bar {
   pointer-events: auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  height: var(--mobile-tab-height);
+  min-height: calc(64px + env(safe-area-inset-bottom, 0px));
+  height: auto;
   border-radius: var(--radius-pill);
   @include liquid-glass;
   box-shadow: var(--shadow-float-pill);
-  padding: 0 0.5rem;
-  max-width: 480px;
+  padding: 6px 6px calc(6px + env(safe-area-inset-bottom, 0px));
+  width: 100%;
+  max-width: 440px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .nav-tab {
@@ -111,9 +118,12 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2px;
+  gap: 3px;
   color: var(--color-label-secondary);
   text-decoration: none;
+  padding: 2px 2px;
+  min-width: 0;
+  overflow: visible;
   @include tap-spring;
 
   .tab-icon-wrap {
@@ -122,13 +132,17 @@ export default {
     align-items: center;
     justify-content: center;
     line-height: 1;
+    height: 24px;
   }
 
   .tab-label {
-    font-size: var(--font-size-caption-2);
+    font-size: 11px;
     font-weight: var(--font-weight-medium);
-    line-height: 1;
-    letter-spacing: 0.01em;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    overflow: visible;
+    text-align: center;
   }
 
   &.active {
